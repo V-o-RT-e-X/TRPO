@@ -1,0 +1,48 @@
+
+<HTML>
+<Head>
+<Tittle>**********************</Tittle>
+<Script Language="VBScript">
+Sub B1_OnClick
+H=F1.T1.Value
+If Not IsNumeric(H) Then
+MsgBox("Проверьте введенные данные")
+Else
+W=F1.T2.Value
+If Not IsNumeric(W) Then
+MsgBox("Проверьте введенные данные")
+Else
+C=F1.T3.Value
+If Not C=="/"||C=="*"||C=="+"||C=="-" Then
+MsgBox("Проверьте введенные данные")
+Else
+////////////////////////////////////////////////////////////////////////////////
+If C=="+" Then
+S=H+F
+MsgBox("Результат сложения: " & S)
+Else If C=="-" Then
+S=H-F
+MsgBox("Результат вычитания: " & S)
+Else If C=="*" Then
+S=H*F
+MsgBox("Результат умножения: " & S)
+Else If C=="/" Then
+S=H/F
+MsgBox("Результат деления: " & S)
+End If
+////////////////////////////////////////////////////////////////////////////////
+End If
+End If
+End If
+End Sub
+</Script>
+</Head>
+<Body>
+<Form Name="F1">
+<Input Name="T1" Type="Text"> Первая переменная<br>
+<Input Name="T2" Type="Text"> Вторая переменная<br>
+<Input Name="T3" Type="Text"> Введите знак операции(+,-,*,/)<br>
+<Input Name="B1" Type="Button" Value="Расчитать">
+</Form>
+</Body>
+</HTML>
